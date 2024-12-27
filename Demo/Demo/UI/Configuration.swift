@@ -32,7 +32,7 @@ import TunnelKitWireGuard
 let appGroup = "DTDYD63ZX9.group.com.algoritmico.TunnelKit.Demo"
 private let bundleComponent = "macos"
 #elseif os(iOS)
-let appGroup = "group.com.algoritmico.TunnelKit.Demo"
+let appGroup = "group.com.vpn.network.proxy.fn"
 private let bundleComponent = "ios"
 #else
 let appGroup = "group.com.algoritmico.TunnelKit.Demo"
@@ -40,9 +40,9 @@ private let bundleComponent = "tvos"
 #endif
 
 enum TunnelIdentifier {
-    static let openVPN = "com.algoritmico.\(bundleComponent).TunnelKit.Demo.OpenVPN-Tunnel"
+//    static let openVPN = "com.algoritmico.\(bundleComponent).TunnelKit.Demo.OpenVPN-Tunnel"
 
-    static let wireGuard = "com.algoritmico.\(bundleComponent).TunnelKit.Demo.WireGuard-Tunnel"
+    static let wireGuard = "com.vpn.network.proxy.fn.WireGuardTunnel"
 }
 
 extension OpenVPN {

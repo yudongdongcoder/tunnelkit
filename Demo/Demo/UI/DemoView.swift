@@ -38,10 +38,10 @@ struct DemoView: View {
 
     var body: some View {
         TabView {
-            OpenVPNView(vpn: vpn, vpnStatus: vpnStatus, keychain: keychain)
-                .tabItem {
-                    Text("OpenVPN")
-                }
+//            OpenVPNView(vpn: vpn, vpnStatus: vpnStatus, keychain: keychain)
+//                .tabItem {
+//                    Text("OpenVPN")
+//                }
 
             WireGuardView(vpn: vpn, vpnStatus: vpnStatus)
                 .tabItem {

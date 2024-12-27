@@ -42,9 +42,9 @@ public protocol WireGuardConfigurationProviding {
 
     var dnsSearchDomains: [String] { get }
 
-    var dnsHTTPSURL: URL? { get }
-
-    var dnsTLSServerName: String? { get }
+//    var dnsHTTPSURL: URL? { get }
+//
+//    var dnsTLSServerName: String? { get }
 
     var mtu: UInt16? { get }
 
@@ -133,23 +133,23 @@ extension WireGuard {
             }
         }
 
-        public var dnsHTTPSURL: URL? {
-            get {
-                interface.dnsHTTPSURL
-            }
-            set {
-                interface.dnsHTTPSURL = newValue
-            }
-        }
-
-        public var dnsTLSServerName: String? {
-            get {
-                interface.dnsTLSServerName
-            }
-            set {
-                interface.dnsTLSServerName = newValue
-            }
-        }
+//        public var dnsHTTPSURL: URL? {
+//            get {
+//                interface.dnsHTTPSURL
+//            }
+//            set {
+//                interface.dnsHTTPSURL = newValue
+//            }
+//        }
+//
+//        public var dnsTLSServerName: String? {
+//            get {
+//                interface.dnsTLSServerName
+//            }
+//            set {
+//                interface.dnsTLSServerName = newValue
+//            }
+//        }
 
         public var mtu: UInt16? {
             get {
@@ -278,13 +278,13 @@ extension WireGuard {
             interface.dnsSearch
         }
 
-        public var dnsHTTPSURL: URL? {
-            interface.dnsHTTPSURL
-        }
-
-        public var dnsTLSServerName: String? {
-            interface.dnsTLSServerName
-        }
+//        public var dnsHTTPSURL: URL? {
+//            interface.dnsHTTPSURL
+//        }
+//
+//        public var dnsTLSServerName: String? {
+//            interface.dnsTLSServerName
+//        }
 
         public var mtu: UInt16? {
             interface.mtu
