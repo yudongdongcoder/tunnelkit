@@ -16,14 +16,14 @@ let package = Package(
             name: "TunnelKit",
             targets: ["TunnelKit"]
         ),
-        .library(
-            name: "TunnelKitOpenVPN",
-            targets: ["TunnelKitOpenVPN"]
-        ),
-        .library(
-            name: "TunnelKitOpenVPNAppExtension",
-            targets: ["TunnelKitOpenVPNAppExtension"]
-        ),
+//        .library(
+//            name: "TunnelKitOpenVPN",
+//            targets: ["TunnelKitOpenVPN"]
+//        ),
+//        .library(
+//            name: "TunnelKitOpenVPNAppExtension",
+//            targets: ["TunnelKitOpenVPNAppExtension"]
+//        ),
         .library(
             name: "TunnelKitWireGuard",
             targets: ["TunnelKitWireGuard"]
@@ -41,7 +41,7 @@ let package = Package(
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
         .package(url: "https://github.com/SwiftyBeaver/SwiftyBeaver", from: "1.9.0"),
-        .package(url: "https://github.com/passepartoutvpn/openssl-apple", from: "3.2.105"),
+//        .package(url: "https://github.com/passepartoutvpn/openssl-apple", from: "3.2.105"),
         //        .package(url: "https://git.zx2c4.com/wireguard-apple", .exact: Version("1.0.15-26")),
         //        .package(url: "https://github.com/passepartoutvpn/wireguard-apple", exact: Version("1.0.17")),
             .package(url: "https://github.com/yudongdongcoder/wireguard-apple", from: "1.0.18")
@@ -73,40 +73,40 @@ let package = Package(
             dependencies: [
                 "TunnelKitCore"
             ]),
-        .target(
-            name: "TunnelKitOpenVPN",
-            dependencies: [
-                "TunnelKitOpenVPNCore",
-                "TunnelKitOpenVPNManager"
-            ]),
+//        .target(
+//            name: "TunnelKitOpenVPN",
+//            dependencies: [
+//                "TunnelKitOpenVPNCore",
+//                "TunnelKitOpenVPNManager"
+//            ]),
         //
-        .target(
-            name: "TunnelKitOpenVPNCore",
-            dependencies: [
-                "TunnelKitCore",
-                "CTunnelKitOpenVPNCore",
-                "CTunnelKitOpenVPNProtocol" // FIXME: remove dependency on TLSBox
-            ]),
-        .target(
-            name: "TunnelKitOpenVPNManager",
-            dependencies: [
-                "TunnelKitManager",
-                "TunnelKitOpenVPNCore"
-            ]),
-        .target(
-            name: "TunnelKitOpenVPNProtocol",
-            dependencies: [
-                "TunnelKitOpenVPNCore",
-                "CTunnelKitOpenVPNProtocol"
-            ]),
-        .target(
-            name: "TunnelKitOpenVPNAppExtension",
-            dependencies: [
-                "TunnelKitAppExtension",
-                "TunnelKitOpenVPNCore",
-                "TunnelKitOpenVPNManager",
-                "TunnelKitOpenVPNProtocol"
-            ]),
+//        .target(
+//            name: "TunnelKitOpenVPNCore",
+//            dependencies: [
+//                "TunnelKitCore",
+//                "CTunnelKitOpenVPNCore",
+//                "CTunnelKitOpenVPNProtocol" // FIXME: remove dependency on TLSBox
+//            ]),
+//        .target(
+//            name: "TunnelKitOpenVPNManager",
+//            dependencies: [
+//                "TunnelKitManager",
+//                "TunnelKitOpenVPNCore"
+//            ]),
+//        .target(
+//            name: "TunnelKitOpenVPNProtocol",
+//            dependencies: [
+//                "TunnelKitOpenVPNCore",
+//                "CTunnelKitOpenVPNProtocol"
+//            ]),
+//        .target(
+//            name: "TunnelKitOpenVPNAppExtension",
+//            dependencies: [
+//                "TunnelKitAppExtension",
+//                "TunnelKitOpenVPNCore",
+//                "TunnelKitOpenVPNManager",
+//                "TunnelKitOpenVPNProtocol"
+//            ]),
         //
         .target(
             name: "TunnelKitWireGuard",
@@ -147,49 +147,50 @@ let package = Package(
         .target(
             name: "CTunnelKitCore",
             dependencies: []),
-        .target(
-            name: "CTunnelKitOpenVPNCore",
-            dependencies: []),
-        .target(
-            name: "CTunnelKitOpenVPNProtocol",
-            dependencies: [
-                "CTunnelKitCore",
-                "CTunnelKitOpenVPNCore",
-                "openssl-apple"
-            ]),
+//        .target(
+//            name: "CTunnelKitOpenVPNCore",
+//            dependencies: []),
+//        .target(
+//            name: "CTunnelKitOpenVPNProtocol",
+//            dependencies: [
+//                "CTunnelKitCore",
+//                "CTunnelKitOpenVPNCore",
+//                "openssl-apple"
+//            ]),
         .target(
             name: "__TunnelKitUtils",
             dependencies: []),
         //
-        .testTarget(
-            name: "TunnelKitCoreTests",
-            dependencies: [
-                "TunnelKitCore"
-            ],
-            exclude: [
-                "RandomTests.swift",
-                "RawPerformanceTests.swift",
-                "RoutingTests.swift"
-            ]),
-        .testTarget(
-            name: "TunnelKitOpenVPNTests",
-            dependencies: [
-                "TunnelKitOpenVPNCore",
-                "TunnelKitOpenVPNAppExtension",
-                "TunnelKitLZO"
-            ],
-            exclude: [
-                "DataPathPerformanceTests.swift",
-                "EncryptionPerformanceTests.swift"
-            ],
-            resources: [
-                .process("Resources")
-            ]),
-        .testTarget(
-            name: "TunnelKitLZOTests",
-            dependencies: [
-                "TunnelKitCore",
-                "TunnelKitLZO"
-            ])
+//        .testTarget(
+//            name: "TunnelKitCoreTests",
+//            dependencies: [
+//                "TunnelKitCore"
+//            ],
+//            exclude: [
+//                "RandomTests.swift",
+//                "RawPerformanceTests.swift",
+//                "RoutingTests.swift"
+//            ]),
+//        .testTarget(
+//            name: "TunnelKitOpenVPNTests",
+//            dependencies: [
+//                "TunnelKitOpenVPNCore",
+//                "TunnelKitOpenVPNAppExtension",
+//                "TunnelKitLZO"
+//            ],
+//            exclude: [
+//                "DataPathPerformanceTests.swift",
+//                "EncryptionPerformanceTests.swift"
+//            ],
+//            resources: [
+//                .process("Resources")
+//            ]),
+//        .testTarget(
+//            name: "TunnelKitLZOTests",
+//            dependencies: [
+//                "TunnelKitCore",
+//                "TunnelKitLZO"
+//            ]
+//        )
     ]
 )

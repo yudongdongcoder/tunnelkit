@@ -1,15 +1,6 @@
 {
   "pins" : [
     {
-      "identity" : "openssl-apple",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/passepartoutvpn/openssl-apple",
-      "state" : {
-        "revision" : "685680e3adbfccdeef84d37fc5732b0031f188c7",
-        "version" : "3.2.108"
-      }
-    },
-    {
       "identity" : "swiftybeaver",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/SwiftyBeaver/SwiftyBeaver",

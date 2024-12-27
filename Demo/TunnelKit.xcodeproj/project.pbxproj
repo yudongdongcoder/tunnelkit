@@ -51,7 +51,6 @@
 		0ED1A5F92B2A6B7C00A0EA90 /* TunnelKitOpenVPN in Frameworks */ = {isa = PBXBuildFile; productRef = 0ED1A5F82B2A6B7C00A0EA90 /* TunnelKitOpenVPN */; };
 		0ED1A5FB2B2A6B7C00A0EA90 /* TunnelKitWireGuard in Frameworks */ = {isa = PBXBuildFile; productRef = 0ED1A5FA2B2A6B7C00A0EA90 /* TunnelKitWireGuard */; };
 		0EFD5B312727250500C7D5FD /* TunnelKitOpenVPN in Frameworks */ = {isa = PBXBuildFile; productRef = 0EFD5B302727250500C7D5FD /* TunnelKitOpenVPN */; };
-		0EFD5B332727250B00C7D5FD /* TunnelKitOpenVPN in Frameworks */ = {isa = PBXBuildFile; productRef = 0EFD5B322727250B00C7D5FD /* TunnelKitOpenVPN */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -207,7 +206,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E81EB53274BB02600E5F2D3 /* TunnelKitWireGuard in Frameworks */,
-				0EFD5B332727250B00C7D5FD /* TunnelKitOpenVPN in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,7 +515,6 @@
 			);
 			name = "TunnelKitDemo-iOS";
 			packageProductDependencies = (
-				0EFD5B322727250B00C7D5FD /* TunnelKitOpenVPN */,
 				0E81EB52274BB02600E5F2D3 /* TunnelKitWireGuard */,
 			);
 			productName = Demo;
@@ -1772,10 +1769,6 @@
 			productName = TunnelKitWireGuard;
 		};
 		0EFD5B302727250500C7D5FD /* TunnelKitOpenVPN */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = TunnelKitOpenVPN;
-		};
-		0EFD5B322727250B00C7D5FD /* TunnelKitOpenVPN */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = TunnelKitOpenVPN;
 		};
