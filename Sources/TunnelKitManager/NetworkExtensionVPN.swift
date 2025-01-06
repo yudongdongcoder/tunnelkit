@@ -31,6 +31,15 @@ private let log = SwiftyBeaver.self
 
 /// `VPN` based on the NetworkExtension framework.
 public class NetworkExtensionVPN: VPN {
+    
+    public var connectedDate: Date? {
+        get async throws {
+            let managers = try await lookupAll()
+            return managers.first?.connection.connectedDate
+        }
+        
+    }
+    
 
     /**
      Initializes a provider.

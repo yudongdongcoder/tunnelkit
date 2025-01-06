@@ -28,6 +28,11 @@ import NetworkExtension
 
 /// Simulates a VPN provider.
 public class MockVPN: VPN {
+    
+    public var connectedDate: Date? {
+        return nil
+    }
+    
     private var tunnelBundleIdentifier: String?
 
     private var isEnabled: Bool {
