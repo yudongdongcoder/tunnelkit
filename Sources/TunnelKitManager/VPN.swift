@@ -31,8 +31,6 @@ public protocol VPN {
 
     associatedtype Extra
 
-    var connectedDate: Date? { get async throws }
-    
     /**
      Synchronizes with the current VPN state.
      */
