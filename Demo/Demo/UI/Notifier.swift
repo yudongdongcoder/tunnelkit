@@ -65,6 +65,6 @@ final class Notifier {
     }
 
     @objc private func VPNDidFail(notification: Notification) {
-        print("VPNStatusDidFail: \(notification.vpnError.localizedDescription)")
+        print("VPNStatusDidFail: \(notification.vpnError?.localizedDescription)")
     }
 }

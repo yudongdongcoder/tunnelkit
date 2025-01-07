@@ -44,7 +44,8 @@ extension Notification {
     public var vpnBundleIdentifier: String? {
         get {
             guard let vpnBundleIdentifier = userInfo?["BundleIdentifier"] as? String else {
-                fatalError("Notification has no vpnBundleIdentifier")
+//                fatalError("Notification has no vpnBundleIdentifier")
+                return nil
             }
             return vpnBundleIdentifier
         }
@@ -59,7 +60,8 @@ extension Notification {
     public var vpnIsEnabled: Bool {
         get {
             guard let vpnIsEnabled = userInfo?["IsEnabled"] as? Bool else {
-                fatalError("Notification has no vpnIsEnabled")
+                assertionFailure("Notification has no vpnIsEnabled")
+                return false
             }
             return vpnIsEnabled
         }
@@ -74,7 +76,8 @@ extension Notification {
     public var vpnStatus: VPNStatus {
         get {
             guard let vpnStatus = userInfo?["Status"] as? VPNStatus else {
-                fatalError("Notification has no vpnStatus")
+                assertionFailure("Notification has no vpnStatus")
+                return .disconnected
             }
             return vpnStatus
         }
@@ -86,10 +89,11 @@ extension Notification {
     }
 
     /// The triggered VPN error.
-    public var vpnError: Error {
+    public var vpnError: Error? {
         get {
             guard let vpnError = userInfo?["Error"] as? Error else {
-                fatalError("Notification has no vpnError")
+//                fatalError("Notification has no vpnError")
+                return nil
             }
             return vpnError
         }
@@ -104,7 +108,8 @@ extension Notification {
     public var connectionDate: Date? {
         get {
             guard let date = userInfo?["ConnectionDate"] as? Date else {
-                fatalError("Notification has no connectionDate")
+//                assertionFailure("Notification has no connectionDate")
+                return nil
             }
             return date
         }
