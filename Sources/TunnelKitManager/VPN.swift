@@ -48,6 +48,8 @@ public protocol VPN {
         configuration: Configuration,
         extra: Extra?
     ) async throws
+    
+    func getStatus() async -> VPNStatus
 
     /**
      Reconnects to the VPN with current configuration.

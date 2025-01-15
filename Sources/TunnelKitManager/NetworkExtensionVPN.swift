@@ -31,7 +31,6 @@ private let log = SwiftyBeaver.self
 
 /// `VPN` based on the NetworkExtension framework.
 public class NetworkExtensionVPN: VPN {
-
     /**
      Initializes a provider.
      */
@@ -61,6 +60,14 @@ public class NetworkExtensionVPN: VPN {
             configuration: configuration,
             extra: extra
         )
+    }
+    
+    public func getStatus() async -> VPNStatus {
+        let managers = try? await lookupAll()
+        guard let manager = managers?.first else {
+            return .disconnected
+        }
+        return manager.connection.status.wrappedStatus
     }
 
     public func reconnect(after: DispatchTimeInterval) async throws {

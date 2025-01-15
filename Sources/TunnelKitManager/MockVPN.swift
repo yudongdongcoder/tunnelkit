@@ -28,6 +28,10 @@ import NetworkExtension
 
 /// Simulates a VPN provider.
 public class MockVPN: VPN {
+    public func getStatus() async -> VPNStatus {
+        vpnStatus
+    }
+    
     private var tunnelBundleIdentifier: String?
 
     private var isEnabled: Bool {
